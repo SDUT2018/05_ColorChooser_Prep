@@ -1,5 +1,6 @@
 package edu.rosehulman.boutell.colorchooser;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
+  public static final String EXTRA_MESSAGE = "EXTRA_"
 
     private RelativeLayout mLayout;
     private TextView mTextView;
@@ -54,7 +56,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()) {
 
             case R.id.action_info:
-                // TODO: Launch a new Info Activity that is a ScrollingActivity.
+                // DONE: Launch a new Info Activity that is a ScrollingActivity.
+                Intent infoIntent = new Intent(this, ScrollingActivity.class);
+                startActivity(infoIntent);
 
                 return true;
 
